@@ -11,7 +11,7 @@ body {
 }
 
 .header {
-    display: flex;
+    display: grid;
 }
 
 .logo-container {
@@ -146,8 +146,8 @@ body {
     opacity: 0.9;
 }
 
-.test {
-    color: black;
+#hiddenStats {
+    opacity: 0;
 }
 
 .animation-intro {
@@ -168,14 +168,3 @@ body {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
-@keyframes biggerMottoHeader {
-    0% {font-size: 0px;}
-    100% {font-size: 3rem;}
-}
-@keyframes biggerMotto {
-    0% {font-size: 0px;}
-    100% {font-size: 1.1rem;}
-}
-
-animation: introLogo 2s forwards;

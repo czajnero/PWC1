@@ -8,6 +8,7 @@ const ContainerElement = document.getElementById('container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('boxes-area');
 const resultElement = document.getElementById('result-container')
+const hiddenElement = document.getElementById('hiddenStats')
 
 // let itemsArray = [0, 0, 0];
 
@@ -30,6 +31,12 @@ nextButton.addEventListener('click', () => {
     currentQuestionIndex++;
     setNextQuestion();
 })
+
+hiddenElement.addEventListener('click', showStats);
+
+function showStats () {
+    alert('Pierwsze ' + array0 + ' Drugie ' + array1 + ' Trzecie ' + array2 + ' Czwarte ' + array3 + 'Piąte ' + array4 + ' Szóste ' + array5)
+}
 
 //currentQuestionIndex = 0;
 
