@@ -1,0 +1,152 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 58px;
+    //font-family: 'Kalam', cursive;
+    font-family: 'Cuprum', sans-serif;
+}
+
+.header {
+    display: flex;
+}
+
+.logo-container {
+    padding: 20px;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    margin-bottom: 2rem;
+}
+
+.logo-container img {
+    max-width: 10vw;
+    max-height: 10vh;
+    min-height: 60px;
+    min-width: 79px;
+}
+
+.container {
+    //display: flex;
+	width: 90%;
+	margin: auto;
+	//min-height: 60vh;
+    align-items: center;
+    //border: 1px solid red;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.question-container {
+    min-height: 60vh;
+}
+
+.result-container {
+    text-align: center;
+}
+
+.boxes-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+}
+
+.question {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.box {
+    padding: 2rem;
+    min-height: 40vh;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 3rem;
+    padding: 2rem;
+    //background-color: hsl(200, 100%, 45%);
+    //background-color: #D85604;
+    //background: linear-gradient(135deg, #D85604, #E88D14 70%, #F3BE26);
+    background: linear-gradient(45deg, #AD1B02, #D85604, #E88D14, #F3BE26);
+    color: white;
+    box-shadow: 0 0 0.8rem 0.2rem black;
+    font-size: 48px;
+    font-family: 'Cuprum', sans-serif;
+}
+
+.box-1 {
+    //background-color: hsl(200, 100%, 55%);
+}
+
+.box-2 {
+    //background-color: hsl(200, 100%, 45%);
+}
+
+.box-3 {
+    //background-color: hsl(200, 100%, 45%);
+}
+
+.question {
+    
+}
+
+.hide {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.start-btn {
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 3rem;
+    padding: 2rem;
+    background: linear-gradient(45deg, #AD1B02, #D85604, #E88D14, #F3BE26);
+    color: white;
+    box-shadow: 0 0 0.8rem 0.2rem black;
+    font-size: 48px;
+    font-family: 'Cuprum', sans-serif;
+    width: 50%;
+    margin-bottom: 3rem;
+    //margin-top: 2rem;
+}
+
+.start-btn:hover {
+    opacity: 0.9;
+}
+
+.next-btn {
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 3rem;
+    padding: 2rem;
+    background: linear-gradient(45deg, #AD1B02, #D85604, #E88D14, #F3BE26);
+    color: white;
+    box-shadow: 0 0 0.8rem 0.2rem black;
+    font-size: 48px;
+    font-family: 'Cuprum', sans-serif;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+.next-btn:hover {
+    opacity: 0.9;
+}
+
+.box:hover {
+    opacity: 0.9;
+}
+
+.test {
+    color: black;
+}

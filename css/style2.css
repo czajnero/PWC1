@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(var(--hue), 100%, 20%);
+    //background: linear-gradient(167deg, rgba(255,255,255,1) 20%, rgba(191, 194, 197,1) 50%, rgba(41, 43, 45,1) 100%);
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+}
+
+.container {
+    width: 90%;
+    //margin: auto;
+    //max-width: 80%;
+    //border: 1px solid #fff;
+    align-items: center;
+    background-color: #FFEEEE;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 0.8rem 0.2rem;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1.2rem 0;
+}
+.btn {
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(var(--hue), 100%, 30%);
+    background-color: hsl(var(--hue), 100%, 50%);
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    color: #fff;
+    outline: none;
+}
+
+.btn.correct {
+    --hue: var(--hue-correct);
+}
+
+.btn.correct {
+    --hue: var(--hue-wrong);
+}
+
+box.highlighted {
+    margin:
+}
