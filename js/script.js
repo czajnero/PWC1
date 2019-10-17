@@ -9,11 +9,19 @@ const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('boxes-area');
 const resultElement = document.getElementById('result-container')
 
+// let itemsArray = [0, 0, 0];
 
-let firstA = 0;
-let firstB = 0;
-let firstC = 0;
+// //itemsArray.push(input.value)
 
+// localStorage.setItem('items', JSON.stringify(itemsArray))
+// const data = JSON.parse(localStorage.getItem('items'))
+
+let array0 = [0,0,0];
+let array1 = [0,0,0];
+let array2 = [0,0,0];
+let array3 = [0,0,0];
+let array4 = [0,0,0];
+let array5 = [0,0,0];
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -23,12 +31,14 @@ nextButton.addEventListener('click', () => {
     setNextQuestion();
 })
 
+//currentQuestionIndex = 0;
+
 function startQuiz() {
     startButton.classList.add('hide');
     questionContainerElement.classList.remove('hide');
     ContainerElement.classList.remove('hide');
-    shuffledQuestions = questions;
     currentQuestionIndex = 0;
+    shuffledQuestions = questions;
     setNextQuestion()
 }
 
@@ -53,6 +63,7 @@ function showQuestion(question) {
 
 function resetState() {
     nextButton.classList.add('hide')
+    questionContainerElement.classList.remove('hide')
     resultElement.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild
@@ -62,21 +73,72 @@ function resetState() {
 
 function selectAnswer(e) {
     const selectedButton = e.target;
-
-    console.log(e.target.id);
     if (document.getElementById(`${e.target.id}`) == box1) {
-       writeToFile()
+        if (`array${currentQuestionIndex}[0]` == 'array0[0]') {
+        array0[0]++
+        }
+        if (`array${currentQuestionIndex}[0]` == 'array1[0]') {
+        array1[0]++
+        }
+        if (`array${currentQuestionIndex}[0]` == 'array2[0]') {
+        array2[0]++
+        }
+        if (`array${currentQuestionIndex}[0]` == 'array3[0]') {
+        array3[0]++
+        }
+        if (`array${currentQuestionIndex}[0]` == 'array4[0]') {
+        array4[0]++
+        }
+        if (`array${currentQuestionIndex}[0]` == 'array5[0]') {
+        array5[0]++
+        }
     }
     if (document.getElementById(`${e.target.id}`) == box2) {
-        beingClicked()
+        if (`array${currentQuestionIndex}[1]` == 'array0[1]') {
+            array0[1]++
+            }
+            if (`array${currentQuestionIndex}[1]` == 'array1[1]') {
+            array1[1]++
+            }
+            if (`array${currentQuestionIndex}[1]` == 'array2[1]') {
+            array2[1]++
+            }
+            if (`array${currentQuestionIndex}[1]` == 'array3[1]') {
+            array3[1]++
+            }
+            if (`array${currentQuestionIndex}[1]` == 'array4[1]') {
+            array4[1]++
+            }
+            if (`array${currentQuestionIndex}[1]` == 'array5[1]') {
+            array5[1]++
+            }
     }
     if (document.getElementById(`${e.target.id}`) == box3) {
-        beingClicked()
+        if (`array${currentQuestionIndex}[2]` == 'array0[2]') {
+            array0[2]++
+            }
+            if (`array${currentQuestionIndex}[2]` == 'array1[2]') {
+            array1[2]++
+            }
+            if (`array${currentQuestionIndex}[2]` == 'array2[2]') {
+            array2[2]++
+            }
+            if (`array${currentQuestionIndex}[2]` == 'array3[2]') {
+            array3[2]++
+            }
+            if (`array${currentQuestionIndex}[2]` == 'array4[2]') {
+            array4[2]++
+            }
+            if (`array${currentQuestionIndex}[2]` == 'array5[2]') {
+            array5[2]++
+            }
     }
 
     if (shuffledQuestions.length > currentQuestionIndex +1) {
         nextButton.classList.remove('hide')
+        questionContainerElement.classList.add('hide')
     } else {
+        pushToLocal()
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
         resultElement.classList.remove('hide')
@@ -84,23 +146,21 @@ function selectAnswer(e) {
     }
 }
 
-var counter = 0;
 
-function beingClicked() {
-    console.log('workin');
-    counter++;
+function pushToLocal () {
+    localStorage.setItem('items0', JSON.stringify(array0))
+    const data0 = JSON.parse(localStorage.getItem('items0'))
+    localStorage.setItem('items1', JSON.stringify(array1))
+    const data1 = JSON.parse(localStorage.getItem('items1'))
+    localStorage.setItem('items2', JSON.stringify(array2))
+    const data2 = JSON.parse(localStorage.getItem('items2'))
+    localStorage.setItem('items3', JSON.stringify(array3))
+    const data3 = JSON.parse(localStorage.getItem('items3'))
+    localStorage.setItem('items4', JSON.stringify(array4))
+    const data4 = JSON.parse(localStorage.getItem('items4'))
+    localStorage.setItem('items5', JSON.stringify(array5))
+    const data5 = JSON.parse(localStorage.getItem('items5'))
 }
-
-function writeToFile() {
-    const fs = require('fs') 
-    let data = "Learning how to write in a file."
-    fs.writeFile('Output.txt', data, (err) => { 
-      
-        // In case of a error throw err. 
-        if (err) throw err; 
-    }) 
-}
-
 
 const questions = [
     {

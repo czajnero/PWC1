@@ -117,8 +117,7 @@ body {
     font-size: 48px;
     font-family: 'Cuprum', sans-serif;
     width: 50%;
-    margin-bottom: 3rem;
-    //margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .start-btn:hover {
@@ -136,7 +135,7 @@ body {
     font-size: 48px;
     font-family: 'Cuprum', sans-serif;
     width: 50%;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 .next-btn:hover {
@@ -150,3 +149,33 @@ body {
 .test {
     color: black;
 }
+
+.animation-intro {
+    animation: introLogo 2s forwards;
+}
+
+.animation-onClickBorder {
+    animation: onClickBorder 2s forwards;
+}
+
+@keyframes onClickBorder {
+    100% { box-shadow: 0 0 1.6rem 0.4rem black;}
+}
+
+@keyframes introLogo {
+    /* 0% {opacity: 0; transform:scale(0);}
+    100% {opacity: 1; transform:scale(1);} */
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes biggerMottoHeader {
+    0% {font-size: 0px;}
+    100% {font-size: 3rem;}
+}
+@keyframes biggerMotto {
+    0% {font-size: 0px;}
+    100% {font-size: 1.1rem;}
+}
+
+animation: introLogo 2s forwards;
