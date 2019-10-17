@@ -65,7 +65,8 @@ function selectAnswer(e) {
 
     console.log(e.target.id);
     if (document.getElementById(`${e.target.id}`) == box1) {
-       writeToFile()
+       firstA++;
+       console.log(firstA);
     }
     if (document.getElementById(`${e.target.id}`) == box2) {
         beingClicked()
@@ -89,16 +90,6 @@ var counter = 0;
 function beingClicked() {
     console.log('workin');
     counter++;
-}
-
-function writeToFile() {
-    const fs = require('fs') 
-    let data = "Learning how to write in a file."
-    fs.writeFile('Output.txt', data, (err) => { 
-      
-        // In case of a error throw err. 
-        if (err) throw err; 
-    }) 
 }
 
 
